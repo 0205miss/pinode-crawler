@@ -4,16 +4,27 @@ const { QuorumSet } = require('@stellarbeat/js-stellar-domain');
 const { createCrawler } = require('../lib');
 const { getConfigFromEnv } = require('@stellarbeat/js-stellar-node-connector');
 
+
+const NetConfig = {
+	network: 'Pi Testnet',
+		nodeInfo: {
+			ledgerVersion: 19,
+			overlayMinVersion: 18,
+			overlayVersion: 19,
+			versionString: 'v15.3.0'
+		},
+		listeningPort: 11625,
+		privateKey: undefined,
+		receiveSCPMessages: true,
+		receiveTransactionMessages: true,
+		maxFloodMessageCapacity: 2000
+}
 // noinspection JSIgnoredPromiseFromCall
 main();
 
 async function main() {
-	if (process.argv.length <= 2) {
-		console.log('Usage: ' + __filename + ' NODES.JSON_PATH ');
 
-		process.exit(-1);
-	}
-	let nodesJsonPath = process.argv[2];
+	let nodesJsonPath = 'seed/nodes.json';
 
 	console.log('[MAIN] Reading NODES.JSON_PATH');
 	let nodes = await jsonStorage.getNodesFromFile(nodesJsonPath);

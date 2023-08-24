@@ -1,8 +1,0 @@
-.idea/
-node_modules
-dist/
-flow-typed/
-.env
-lib/
-.clinic/
-crawl_result/

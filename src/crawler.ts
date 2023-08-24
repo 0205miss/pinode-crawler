@@ -605,9 +605,9 @@ export class Crawler {
 
 		console.timeEnd('crawl');
 
-		if (crawlState.maxCrawlTimeHit)
+/*		if (crawlState.maxCrawlTimeHit)
 			reject(new Error('Max crawl time hit, closing crawler'));
-
+*/
 		resolve({
 			peers: crawlState.peerNodes,
 			closedLedgers: crawlState.slots.getClosedSlotIndexes(),

@@ -1,10 +1,10 @@
 [
   {
-    "ip": "core-testnet1.stellar.org",
-    "port": 11625,
-    "host": "core-testnet1.stellar.org",
-    "publicKey": "GCM6QMP3DLRPTAZW2UZPCPX2LF3SXWXKPMP3GKFZBDSF3QZGV2G5QSTK",
-    "name": "SDF validator 2",
+    "ip": "182.233.163.193",
+    "port": 31402,
+    "host": "testnet1.minepi.com",
+    "publicKey": "GC6R2IQ7LAEWFFNV2ZMXPMOLGGCFRFX6NQFCNT2PLB3KVJPHTIYV4ZPR",
+    "name": "testnet1",
     "ledgerVersion": 10,
     "overlayVersion": 8,
     "overlayMinVersion": 7,
