@@ -4,8 +4,6 @@ const { QuorumSet } = require('@stellarbeat/js-stellar-domain');
 const { createCrawler } = require('../lib');
 const nodes = require('../crawl_result/resultV1.json')
 
-
-
 const NetConfig = {
 	network: 'Pi Testnet',
 		nodeInfo: {
@@ -26,7 +24,7 @@ main();
 
 async function main() {
 
-        console.log('[MAIN] Reading NODES.JSON_PATH')
+    console.log('[MAIN] Reading NODES.JSON_PATH')
 	console.log('[MAIN] Crawl!');
 	let trustedQSet = new QuorumSet(51, [
 		'GC6R2IQ7LAEWFFNV2ZMXPMOLGGCFRFX6NQFCNT2PLB3KVJPHTIYV4ZPR',
@@ -36,7 +34,7 @@ async function main() {
 
 	let myCrawler = createCrawler({
 		nodeConfig: NetConfig,
-		maxOpenConnections: 100,
+		maxOpenConnections: 200,
 		maxCrawlTime: 900000,
 		blackList: new Set()
 	});
