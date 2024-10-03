@@ -18,7 +18,7 @@
   },
   "types": "lib/index.d.ts",
   "files": [
-    ".env.dist",
+    ".env.dist"j
     "readme.md",
     "lib/**",
     "LICENSE",
