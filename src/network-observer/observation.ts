@@ -5,8 +5,8 @@ import { Ledger } from '../crawler';
 import { ObservationState } from './observation-state';
 import { Slots } from './peer-event-handler/stellar-message-handlers/scp-envelope/scp-statement/externalize/slots';
 import { QuorumSet } from '@stellarbeat/js-stellarbeat-shared';
-import * as LRUCache from 'lru-cache';
 import { QuorumSetState } from './quorum-set-state';
+import { LRUCache } from 'lru-cache';
 
 export class Observation {
 	public state: ObservationState = ObservationState.Idle;
@@ -24,7 +24,7 @@ export class Observation {
 		public slots: Slots
 	) {
 		this.topTierAddressesSet = this.mapTopTierAddresses(topTierAddresses);
-		this.envelopeCache = new LRUCache<string, number>(5000);
+		this.envelopeCache = new LRUCache<string, number>({ max: 5000 });
 	}
 
 	private mapTopTierAddresses(topTierNodes: NodeAddress[]) {
